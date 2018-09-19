@@ -1,5 +1,6 @@
 package com.example.tan.kings;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -47,5 +48,10 @@ public class MainActivity extends AppCompatActivity {
         if(king.getTo() != 9999)
             return String.format("%s: - %d", king.getName(), king.getTo());
         return king.getName();
+    }
+
+    public void next(View view) {
+        Intent nextPage = new Intent(MainActivity.this, SpinnerKings.class);
+        startActivity(nextPage);
     }
 }
